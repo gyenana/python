@@ -1,10 +1,10 @@
 import inputstring
 import forward_reverse_print
 
-a=inputstring.input()
-direction = input("방향을 선택하세요 / F = 정방향 / R = 역방향 : ")
 
 while True :
+    a = inputstring.input()
+    direction = input("방향을 선택하세요 / F = 정방향 / R = 역방향 : ")
     if direction == 'F' or direction =='f':
         forward_reverse_print.forwardprint(a)
         break
@@ -13,4 +13,5 @@ while True :
         break
     else :
         print("주어진 문자만 입력하세요. F 나 R 중에 고르세요")
-        break
+        continue
+
