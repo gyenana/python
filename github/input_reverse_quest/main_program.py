@@ -1,7 +1,9 @@
+# 모듈 호출
 import input_str
 import print_input
 import reverse_input
 
+# 반복문 실행
 while True :
         result=''
         arg = input_str.input_str()
