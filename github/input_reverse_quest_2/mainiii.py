@@ -8,6 +8,9 @@ while True :
     if direction == 'F' or direction =='f':
         forward_reverse_print.forwardprint(a)
         break
-    if direction =='R' or direction =='r':
+    elif direction =='R' or direction =='r':
         forward_reverse_print.reverseprint(a)
+        break
+    else :
+        print("주어진 문자만 입력하세요. F 나 R 중에 고르세요")
         break
