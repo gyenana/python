@@ -26,7 +26,7 @@ class Warrior(Character):
     def attack(self):
         print("{} {} 캐릭터가 {} 으로 {} 스킬을 시전합니다!!!".format(self.classchoice,self.charname,self.weapon,self.skill))
 
-class knight(Character):
+class Knight(Character):
     def __init__(self,character):
         super().__init__(character.charname)
         self.classchoice = "나이트"
@@ -37,7 +37,7 @@ class knight(Character):
     def attack(self):
         print("{} {} 캐릭터가 {} 으로 {} 스킬을 시전합니다!!!".format(self.classchoice,self.charname,self.weapon,self.skill))
 
-class magician(Character):
+class Magician(Character):
     def __init__(self,character):
         super().__init__(character.charname)
         self.classchoice = "매지션"
@@ -48,7 +48,7 @@ class magician(Character):
     def attack(self):
         print("{} {} 캐릭터가 {} 으로 {} 스킬을 시전합니다!!!".format(self.classchoice,self.charname,self.weapon,self.skill))
 
-class axler(Character):
+class Axler(Character):
     def __init__(self,character):
         super().__init__(character.charname)
         self.classchoice = "액슬러"
@@ -58,7 +58,6 @@ class axler(Character):
         print("{} 캐릭터가 {} 로 전직하였습니다!!".format(self.charname,self.classchoice))
     def attack(self):
         print("{} {} 캐릭터가 {} 으로 {} 스킬을 시전합니다!!!".format(self.classchoice,self.charname,self.weapon,self.skill))
-
 
 print("======게임 시작!======")
 charname = str(input("캐릭터명을 입력하세요: "))
@@ -82,13 +81,13 @@ while True:
             char=Warrior(char)
             char.create_char()
         elif b=='2':
-            char = knight(char)
+            char = Knight(char)
             char.create_char()
         elif b=='3':
-            char = magician(char)
+            char = Magician(char)
             char.create_char()
         elif b=='4':
-            char = Warrior(char)
+            char = Axler(char)
             char.create_char()
     elif a=='2':
         char.levelup()
@@ -99,3 +98,5 @@ while True:
     elif a=='Z' or a=='z':
         print("======게임종료======")
         break
+
+
